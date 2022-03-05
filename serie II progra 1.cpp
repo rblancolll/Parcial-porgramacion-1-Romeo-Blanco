@@ -22,6 +22,18 @@ int main(){
 
     cout <<"\nEl factorial del numero es: "<<factorial<<endl;
 
+    cout <<"-----------------------------------------------------------"<<endl;
+cout <<"TABLAS DE MULTIPLICAR"<<endl;
+	int numero1;
+	do{
+		cout<<"INGRESE UN NUMERO DEL 1 AL 10: ";
+		cin>>numero1;
+		
+	}while((numero1<1) || (numero1>10));
+	
+	for(int i=1; i<=10; i++){
+		cout<<numero1<<" * "<<i<<" = "<<numero1 * i<<endl;
+	}
 
     return 0;
 }
