@@ -69,6 +69,53 @@ cout <<"TABLAS DE MULTIPLICAR"<<endl;
 	cout << "El promedio de los numeros impares es: " << float(sumaImpar1/impar) << endl;
     cout << "\nLos numeros pares son: " << par1 << endl;
     
+    cout <<"-----------------------------------------------------------"<<endl;
+	   cout <<"DIA LABORAL O NO LABORAL"<<endl;
+	    int num;
+	    cout << "Elige un dia de la semana" << endl;
+        cout << "1. Lunes" << endl;
+        cout << "2. Martes" << endl;
+        cout << "3. Miercoles" << endl;
+        cout << "4. Jueves" << endl;
+        cout << "5. Viernes" << endl;
+        cout << "6. Sabado" << endl;
+        cout << "7. Domingo" << endl;
+        
+        cin >>num;
+        
+        switch (num) {
+            case 1:
+                cout << "Dia laboral ";
+                break;
+                
+            case 2:
+                cout << "Dia laboral";
+                break;
+                
+            case 3:
+                cout << "Dia laboral";
+                break;
+                
+            case 4:
+                cout << "Dia laboral";
+                break;
+			
+			case 5:
+                cout << "Dia laboral";
+                break;      
+            
+			case 6:
+                cout << "Descanso de fin de semana";
+                break;      
+            
+			case 7:
+                cout << "Descanso de fin de semana";
+                break;      
+            default: cout<<"Error de opcion.";        
+	        
+	   }
+	   
+       cout <<"  "<<endl; system("pause");
     return 0;
 }
     
