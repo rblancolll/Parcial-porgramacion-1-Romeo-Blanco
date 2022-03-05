@@ -35,6 +35,40 @@ cout <<"TABLAS DE MULTIPLICAR"<<endl;
 		cout<<numero1<<" * "<<i<<" = "<<numero1 * i<<endl;
 	}
 
+    cout <<"-----------------------------------------------------------"<<endl;
+     cout <<"NUMERO PARES E IMPARES"<<endl;
+	 int n, n2, impar= 0, par = 0, sumaPar = 0, sumaImpar = 0, sumaPar1 = 0, sumaImpar1 = 0, par1 = 0;
+ 
+    for (int i = 0 ; i < 10; i++)
+    {
+        cout << "(" << i + 1 << "/10): ";
+        cin >> n;
+        
+        
+        if (n % 2 == 0)
+        {
+            sumaImpar += n;
+            impar++;
+        }
+        else
+            sumaPar += n;
+    
+        
+        if (n % 2 == 0)
+        {
+            sumaPar1 += n;
+            par1++;
+        }
+      else
+            sumaImpar1 += n;
+	  
+      }
+ 
+    cout << "\nLa suma de los numeros impares es: " << sumaPar << endl;
+    cout << "\nLa suma de los numeros pares es: " << sumaImpar << endl;
+	cout << "El promedio de los numeros impares es: " << float(sumaImpar1/impar) << endl;
+    cout << "\nLos numeros pares son: " << par1 << endl;
+    
     return 0;
 }
     
