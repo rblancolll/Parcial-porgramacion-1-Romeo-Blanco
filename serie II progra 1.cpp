@@ -116,6 +116,79 @@ cout <<"TABLAS DE MULTIPLICAR"<<endl;
 	   }
 	   
        cout <<"  "<<endl; system("pause");
+       
+        cout <<"-----------------------------------------------------------"<<endl;
+	
+	vector<string> claves;
+
+    claves.push_back("123456");
+    string usuario, password;
+
+    int contador = 0;
+    bool ingresa = false;
+
+    do
+    {
+        system("cls");
+       cout << "\t\t\t   SISTEMA BANCARIO  " << endl;
+	    cout << "\t\t\t     BIENVENIDO   " << endl;
+        cout << "\t\t\t-------------------" << endl;
+        char caracter;
+
+        cout << "\tPassword: ";
+        caracter = getch();
+
+        password = "";
+
+        while (caracter != ENTER)
+        {
+
+            if (caracter != BACKSPACE)
+            {
+                password.push_back(caracter);
+                cout << "*";
+            }
+            else
+            {
+                if (password.length() > 0)
+                {
+                    cout << "\b \b";
+                    password = password.substr(0, password.length() - 1);
+                }
+            }
+
+            caracter = getch();
+        }
+
+        for (int i = 0; i < password.size(); i++)
+        {
+            if (claves[i] == password)
+            {
+                ingresa = true;
+                break;
+            }
+        }
+
+        if (!ingresa)
+        {
+            cout << "\n\n\Contraseña incorrecta" << endl;
+            cin.get();
+            contador++;
+        }
+        
+
+    } while (ingresa == false && contador < INTENTOS);
+
+    if (ingresa == false)
+    {
+        cout << "\n\tNo pudo ingresar al sistema." << endl;
+    }
+    else
+    {
+        cout << "\n\n\tBienvenido al sistema" << endl;
+       
+    }
+
     return 0;
 }
     
